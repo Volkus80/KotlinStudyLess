@@ -12,7 +12,7 @@ fun main() {
     hour = "10"
     minute = "55"
 
-    print(year)
+    print(hour)
     print(":")
     print(minute)
 }
