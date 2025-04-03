@@ -1,15 +1,14 @@
 package ru.volkus.rate.less_1
 
-import java.text.Format
-
+const val TIME_CALC_UNIT_VALUE = 60
 fun main() {
+    val secondsInHourValue = TIME_CALC_UNIT_VALUE * TIME_CALC_UNIT_VALUE
     val secondsValue: Short = 6480
 
-    val hours: Int = 6480 / 3600
-    val minutes: Int = (secondsValue - hours * 3600) / 60
-    val seconds: Int = secondsValue - hours * 3600 - minutes * 60
+    val hours: Int = 6480 / secondsInHourValue
+    val minutes: Int = (secondsValue - hours * secondsInHourValue) / TIME_CALC_UNIT_VALUE
+    val seconds: Int = secondsValue - hours * secondsInHourValue - minutes * TIME_CALC_UNIT_VALUE
 
-    println("${String.format("%02d", hours)}:${String.format("%02d", minutes)}:${String.format("%02d", seconds)}")
-
+    println("%02d:%02d:%02d".format(hours, minutes, seconds))
 }
 
