@@ -11,7 +11,7 @@ fun main() {
     val interestRate = 16.7
     val depositTerm = 20
 
-    val totalDepositSum = depositSum * (1 + interestRate/100).pow(depositTerm)
+    val totalDepositSum = depositSum * (1 + interestRate / 100).pow(depositTerm)
 
     println("%.3f".format(totalDepositSum))
 }
