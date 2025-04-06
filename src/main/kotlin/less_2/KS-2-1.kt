@@ -1,5 +1,6 @@
 package ru.volkus.rate.less_2
 
+
 fun main() {
     val pupilsQuantity = 4
     val firstsMark = 3.0
