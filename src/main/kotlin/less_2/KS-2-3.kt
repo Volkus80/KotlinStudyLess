@@ -5,15 +5,18 @@ fun main() {
     val startMinute = 39
     val tripMinutes = 457
 
-    val startInMinutes = startHour * 60 + startMinute
+    val minutesInHour = 60
+    val hoursInDay = 24
+
+    val startInMinutes = startHour * minutesInHour + startMinute
     val endInMinutes = startInMinutes + tripMinutes
 
-    val additionalDays = endInMinutes / (24*60)
+    val additionalDays = endInMinutes / (hoursInDay * minutesInHour)
 
-    val endMinutesWithoutDays = endInMinutes - (additionalDays * 24 * 60)
+    val endMinutesWithoutDays = endInMinutes - (additionalDays * 24 * minutesInHour)
 
-    val endHour = endMinutesWithoutDays / 60
-    val endMinute = endMinutesWithoutDays - endHour * 60
+    val endHour = endMinutesWithoutDays / minutesInHour
+    val endMinute = endMinutesWithoutDays - endHour * minutesInHour
 
     println("$endHour:$endMinute")
 }
