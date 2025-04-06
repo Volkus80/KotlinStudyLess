@@ -9,6 +9,12 @@ fun main() {
     val cristalMineral = 7
     val ironMineral = 11
 
-    println("cristal buff value = ${cristalMineral * buffPerCent / 100}")
-    println("iron buff value = ${ironMineral * buffPerCent / 100}")
+    val percents = 100
+
+    val cristalBuffValue = cristalMineral * buffPerCent / percents
+    val ironBuffValue = ironMineral * buffPerCent / percents
+
+
+    println("cristal buff value = $cristalBuffValue")
+    println("iron buff value = $ironBuffValue")
 }
