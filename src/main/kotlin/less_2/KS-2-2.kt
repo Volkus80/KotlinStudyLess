@@ -1,13 +1,17 @@
 package ru.volkus.rate.less_2
 
 fun main() {
-    val salaryOfPermanentStaff = 50 * 30_000
+    val employeesQuantity = 50
+    val employeesSalary = 30_000
+    val salaryOfPermanentStaff = employeesQuantity * employeesSalary
     println(salaryOfPermanentStaff)
 
-    val salaryConsideringInters = salaryOfPermanentStaff + 30 * 20_000
-    println(salaryConsideringInters)
+    val internsQuantity = 30
+    val internSalary = 20_000
+    val salaryConsideringInterns = salaryOfPermanentStaff + internsQuantity * internSalary
+    println(salaryConsideringInterns)
 
-    val averageSalary = salaryConsideringInters / 80
+    val averageSalary = salaryConsideringInterns / (employeesQuantity + internsQuantity)
     println(averageSalary)
 
 }
