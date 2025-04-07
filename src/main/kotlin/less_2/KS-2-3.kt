@@ -13,7 +13,7 @@ fun main() {
 
     val additionalDays = endInMinutes / (hoursInDay * minutesInHour)
 
-    val endMinutesWithoutDays = endInMinutes - (additionalDays * 24 * minutesInHour)
+    val endMinutesWithoutDays = endInMinutes - (additionalDays * hoursInDay * minutesInHour)
 
     val endHour = endMinutesWithoutDays / minutesInHour
     val endMinute = endMinutesWithoutDays - endHour * minutesInHour
